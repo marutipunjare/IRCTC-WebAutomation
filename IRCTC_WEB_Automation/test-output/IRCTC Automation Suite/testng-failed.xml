@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [IRCTC Automation Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="Train Search Test(failed)">
+    <classes>
+      <class name="test.TrainSearchTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="searchTrainsBetweenStations" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.TrainSearchTest -->
+    </classes>
+  </test> <!-- Train Search Test(failed) -->
+</suite> <!-- Failed suite [IRCTC Automation Suite] -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="IRCTC Automation Suite" verbose="1" parallel="false">
+
+    <!-- Parameter to select browser (Chrome/IE/Edge etc. from config.properties) -->
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Train Search Test">
+        <classes>
+            <class name="test.TrainSearchTest"/>
+        </classes>
+    </test>
+
+</suite>
