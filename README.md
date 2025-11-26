@@ -1,39 +1,27 @@
-🚆 IRCTC Web Automation – Selenium | Java | TestNG | POM
+IRCTC Web Automation – Selenium | Java | TestNG
 
-This project automates the IRCTC train search workflow — entering journey stations, selecting travel date, searching trains, and printing the available train list on the console.
-It is built using Java, Selenium WebDriver, TestNG, and follows a well-structured Page Object Model (POM) with utilities, reporting, logging, and data-driven testing.
+This project automates the IRCTC train search process — selecting stations, choosing a date, searching for trains, and printing available trains on the console.
+It uses Selenium WebDriver, Java, TestNG, and follows a Page Object Model structure.
 
-📌 Key Features
+Key Features
 
-Automated IRCTC train search functionality
+Automates train search flow on IRCTC
 
-Page Object Model (POM) architecture
+Page Object Model (POM) structure
 
 Data-driven testing using Excel
 
-TestNG framework with DataProviders
+TestNG DataProviders
 
-Extent Reports integration (HTML reporting)
+Extent HTML reporting
 
 Log4j2 logging
 
-Screenshot capture on failure
+Screenshot capture on test failure
 
-Config-driven URL, browser, and test data
+Config-driven browser and test settings
 
-WebDriverWait & reusable Action utilities
-
-🚀 Tech Stack
-Category	Tools / Technologies
-Language	Java
-Automation	Selenium WebDriver
-Test Framework	TestNG
-Build Tool	Maven
-Reporting	Extent Reports
-Logging	Log4j2
-Data Handling	Apache POI (Excel)
-Architecture	Page Object Model (POM)
-📂 Project Folder Structure
+Project Folder Structure
 IRCTC_WEB_Automation/
 │
 ├── Results/
@@ -48,13 +36,10 @@ IRCTC_WEB_Automation/
 │   ├── main/java/
 │   │   ├── base/
 │   │   │   └── BaseTest.java
-│   │   │
 │   │   ├── locators/
 │   │   │   └── HomePageLocators.java
-│   │   │
 │   │   ├── pages/
 │   │   │   └── HomePage.java
-│   │   │
 │   │   └── utils/
 │   │       ├── ActionUtils.java
 │   │       ├── ConfigReader.java
@@ -65,7 +50,6 @@ IRCTC_WEB_Automation/
 │   └── test/java/
 │       ├── dataprovider/
 │       │   └── DataProviders.java
-│       │
 │       └── test/
 │           └── TrainSearchTest.java
 │
@@ -75,98 +59,68 @@ IRCTC_WEB_Automation/
 │   ├── log4j2.xml
 │   └── testng.xml
 │
-├── target/
-│
-├── test-output/
-│
 └── pom.xml
 
-🧪 Automated Test Scenario
-Test Case: Search Trains Between Two Stations
+Automated Test Scenario
 
-Steps automated:
+Search trains between two stations
 
-Launch IRCTC Web Portal
+Steps covered:
 
-Enter "From" station
+Launch IRCTC application
 
-Enter "To" station
+Enter "From" and "To" stations
 
-Select journey date from calendar
+Select journey date
 
-Click on Search
+Click Search
 
-Extract available train details
+Extract and print available train list
 
-Print train list on console
+Generate Extent Report
 
-Log results + generate ExtentReport
+Capture screenshots for failure
 
-Capture screenshots for failures
+Sample Console Output
+Available Trains:
+1. 12124 - Deccan Queen
+2. 11007 - Deccan Express
+3. 22221 - Rajdhani Express
 
-📊 Sample Console Output
-Available Trains on 21-Jan-2025
---------------------------------------
-1. 12124 - Deccan Queen | 17:10 → 20:25
-2. 11007 - Deccan Express | 07:00 → 10:15
-3. 22221 - Rajdhani Express | 16:00 → 19:10
-...
-
-⚙️ Run the Project
-1️⃣ Prerequisites
+How to Run
+Prerequisites
 
 JDK 8+
 
 Maven
 
-Chrome & matching ChromeDriver
+Chrome browser & ChromeDriver
 
 IntelliJ / Eclipse
 
-2️⃣ Run via Maven
+Run Using Maven
 mvn clean test
 
-3️⃣ Run via TestNG XML
-Right click → testng.xml → Run
+Run Using TestNG
 
-📁 Configuration File (config.properties)
+Right-click testng.xml → Run
 
-Contains environment and browser settings:
-
+Configuration (config.properties)
 url=https://www.irctc.co.in/
 browser=chrome
 implicitWait=10
 explicitWait=20
 
-📝 Excel Test Data (TrainData.xlsx)
+Test Data (TrainData.xlsx)
 
-Contains station & date data used by DataProviders:
+Example:
 
 FromStation	ToStation	JourneyDate
 PUNE	MUMBAI	22/01/2025
-📈 Reports & Logs
-✔ Extent Report
+Reports & Logs
 
-Generated after every execution at:
+Extent Report: Results/ExtentReport.html
 
-Results/ExtentReport.html
+Logs: Results/logs/
 
-✔ Logs
-
-Stored under:
-
-Results/logs/
-
-✔ Screenshots
-
-Captured under:
-
-Results/Snapshots/
-
-🔧 Utilities Included
-Utility File	Purpose
-ActionUtils.java	Reusable Selenium actions
-ConfigReader.java	Read config properties
-ExcelUtils.java	Read Excel test data
-ExtentManager.java	Setup Extent Reports
-ScreenshotUtils.java	Capture screenshots
+Screenshots: Results/Snapshots/
