@@ -21,45 +21,6 @@ Screenshot capture on test failure
 
 Config-driven browser and test settings
 
-Project Folder Structure
-IRCTC_WEB_Automation/
-│
-├── Results/
-│   ├── logs/
-│   ├── ExtentReport.html
-│   └── Snapshots/
-│
-├── TestData/
-│   └── TestData.xlsx
-│
-├── src/
-│   ├── main/java/
-│   │   ├── base/
-│   │   │   └── BaseTest.java
-│   │   ├── locators/
-│   │   │   └── HomePageLocators.java
-│   │   ├── pages/
-│   │   │   └── HomePage.java
-│   │   └── utils/
-│   │       ├── ActionUtils.java
-│   │       ├── ConfigReader.java
-│   │       ├── ExcelUtils.java
-│   │       ├── ExtentManager.java
-│   │       └── ScreenshotUtils.java
-│   │
-│   └── test/java/
-│       ├── dataprovider/
-│       │   └── DataProviders.java
-│       └── test/
-│           └── TrainSearchTest.java
-│
-├── resources/
-│   ├── TrainData.xlsx
-│   ├── config.properties
-│   ├── log4j2.xml
-│   └── testng.xml
-│
-└── pom.xml
 
 Automated Test Scenario
 
