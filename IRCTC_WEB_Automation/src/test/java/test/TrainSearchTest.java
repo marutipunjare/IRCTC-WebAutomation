@@ -26,12 +26,12 @@ public class TrainSearchTest extends BaseTest {
             home.scrollBy(70); // scroll by 70px
             List<String> trainNames = home.searchTrains();
 
-            // ✅ Assertions
+            // Assertions
             Assert.assertTrue(driver.getTitle().contains("IRCTC"), "Page title validation failed");
             int trainCount = trainNames.size();
             Assert.assertTrue(trainCount > 0, "No trains found!");
 
-            // ✅ Console Output
+            // Console Output
             System.out.println("\n===============================");
             System.out.println("From: " + fromStation + " → To: " + toStation);
             System.out.println("Number of trains: " + trainCount);
@@ -41,14 +41,14 @@ public class TrainSearchTest extends BaseTest {
             }
             System.out.println("===============================");
 
-            // ✅ Today’s date in dd/MM/yyyy format
+            // Today’s date in dd/MM/yyyy format
             String todayFormatted = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
             System.out.println("Today’s Date: " + todayFormatted);
 
-            // ✅ Capture Screenshot
+            // Capture Screenshot
             home.captureResultPage("TrainSearch_" + fromStation + "_" + toStation);
 
-            // ✅ Log in Extent Report
+            // Log in Extent Report
             ExtentManager.logPass("Test Passed. Found " + trainCount + " trains between " 
                                    + fromStation + " and " + toStation);
 
@@ -60,3 +60,4 @@ public class TrainSearchTest extends BaseTest {
         }
     }
 }
+
