@@ -1,4 +1,4 @@
-IRCTC Web Automation – Selenium | Java | TestNG
+IRCTC Web Automation – Selenium | Java | TestNG | POM
 
 This project automates the IRCTC train search process — selecting stations, choosing a date, searching for trains, and printing available trains on the console.
 It uses Selenium WebDriver, Java, TestNG, and follows a Page Object Model structure.
